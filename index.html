@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EpokSMP</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="menuPage">
+
+        <div class="background"></div>
+        <div class="overlay"></div>
+
+        <main class="content">
+
+            <div class="menu">
+
+                <button class="menu-button" onclick="showRules()">
+                    Rules
+                </button>
+
+                <button class="menu-button">
+                    Info
+                </button>
+
+                <a href="https://your-map-link.com" class="menu-button">
+                    Map
+                </a>
+
+                <img src="assets/Logo.png" alt="EpokSMP Logo" class="logo">
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <div id="rulesPage" class="rules-page">
+
+        <header class="rules-header">
+
+            <button class="back-button" onclick="showMenu()">
+                ← Back
+            </button>
+
+            <div class="section-buttons">
+
+                <button
+                    onclick="showSection(1)"
+                    class="section-button active"
+                    id="sectionButton1">
+                    Kapitel 1
+                </button>
+
+                <button
+                    onclick="showSection(2)"
+                    class="section-button"
+                    id="sectionButton2">
+                    Kapitel 2
+                </button>
+
+                <button
+                    onclick="showSection(3)"
+                    class="section-button"
+                    id="sectionButton3">
+                    Kapitel 3
+                </button>
+
+            </div>
+
+        </header>
+
+        <main class="rules-content">
+
+            <section id="section1" class="rule-section">
+                <h1>Kapitel 1</h1>
+
+                <div id="chapter1-text" class="rules-text">
+                    Loading...
+                </div>
+            </section>
+
+
+            <section id="section2" class="rule-section">
+                <h1>Kapitel 2</h1>
+
+                <div id="chapter2-text" class="rules-text">
+                    Loading...
+                </div>
+            </section>
+
+
+            <section id="section3" class="rule-section">
+                <h1>Kapitel 3</h1>
+
+                <div id="chapter3-text" class="rules-text">
+                    Loading...
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script>
+
+        function showRules() {
+            document.getElementById("menuPage").style.display = "none";
+            document.getElementById("rulesPage").style.display = "block";
+
+            showSection(1);
+        }
+
+        function showMenu() {
+            document.getElementById("rulesPage").style.display = "none";
+            document.getElementById("menuPage").style.display = "block";
+        }
+
+
+
+        function showSection(sectionNumber) {
+
+            document.querySelectorAll(".rule-section").forEach(section => {
+                section.style.display = "none";
+            });
+
+            document.querySelectorAll(".section-button").forEach(button => {
+                button.classList.remove("active");
+            });
+
+            document.getElementById(
+                "section" + sectionNumber
+            ).style.display = "block";
+
+            document.getElementById(
+                "sectionButton" + sectionNumber
+            ).classList.add("active");
+        }
+
+        async function loadRules() {
+
+            try {
+
+                const chapter1 = await fetch("rules/kapitel1.txt");
+                const chapter1Text = await chapter1.text();
+
+                document.getElementById("chapter1-text").textContent = chapter1Text;
+
+
+                const chapter2 = await fetch("rules/kapitel2.txt");
+                const chapter2Text = await chapter2.text();
+
+                document.getElementById("chapter2-text").textContent = chapter2Text;
+
+
+                const chapter3 = await fetch("rules/kapitel3.txt");
+                const chapter3Text = await chapter3.text();
+
+                document.getElementById("chapter3-text").textContent = chapter3Text;
+
+            } catch (error) {
+
+                console.error("Could not load rules:", error);
+
+            }
+
+        }
+
+
+
+        loadRules();
+
+    </script>
+
+</body>
+</html>
