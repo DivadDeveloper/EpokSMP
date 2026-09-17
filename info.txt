@@ -3,5 +3,3 @@ You do not have to worry about your builds being griefed or stolen because it is
 
 EpokSMP is a private server and permission is needed to join the server.
 
-IP: EpokSMP.exaroton.me
-Version: 26.3

@@ -1,37 +1,66 @@
+/* ==================================================
+   RESET
+   ================================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+/* ==================================================
+   GENERAL
+   ================================================== */
+
 body {
     width: 100%;
     min-height: 100vh;
-    font-family: Arial, sans-serif;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: white;
+    color: black;
 }
 
+
+/* ==================================================
+   MAIN MENU
+   ================================================== */
 
 #menuPage {
     width: 100%;
     height: 100vh;
+
+    overflow: hidden;
 }
+
+
+/* Background */
 
 .background {
     position: fixed;
+
     inset: -20px;
 
     background-image: url("assets/Background.png");
+
     background-size: cover;
     background-position: center;
 
     filter: blur(8px);
+
     transform: scale(1.05);
 
     z-index: -2;
 }
 
+
+/* Dark overlay */
+
 .overlay {
     position: fixed;
+
     inset: 0;
 
     background: rgba(0, 0, 0, 0.25);
@@ -39,36 +68,57 @@ body {
     z-index: -1;
 }
 
+
+/* Menu positioning */
+
 .content {
     width: 100%;
     height: 100vh;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 }
 
-.menu {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
 
+.menu {
     position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 18px;
 }
 
+
+/* ==================================================
+   MENU BUTTONS
+   ================================================== */
 
 .menu-button {
     width: 220px;
     height: 60px;
 
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
     border: none;
     border-radius: 0;
 
     background: #1683e8;
+
     color: white;
 
     font-size: 22px;
     font-weight: bold;
+
+    text-decoration: none;
 
     cursor: pointer;
 
@@ -78,22 +128,24 @@ body {
         transform 0.1s ease,
         box-shadow 0.1s ease,
         background 0.1s ease;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-decoration: none;
 }
+
 
 .menu-button:hover {
     background: #2695f5;
 }
 
+
 .menu-button:active {
     transform: translate(6px, 6px);
+
     box-shadow: 2px 2px 0 #07539b;
 }
+
+
+/* ==================================================
+   LOGO
+   ================================================== */
 
 .logo {
     position: absolute;
@@ -113,79 +165,68 @@ body {
     pointer-events: none;
 }
 
-.rules-page {
+
+/* ==================================================
+   SUB PAGES
+   ================================================== */
+
+.sub-page {
     display: none;
 
     width: 100%;
     min-height: 100vh;
 
-    background: white;
+    background: #ffffff;
 
-    color: black;
+    color: #000000;
 }
 
 
-.rules-header {
+/* ==================================================
+   PAGE HEADER
+   ================================================== */
+
+.page-header {
     width: 100%;
     min-height: 90px;
 
-    background: #1683e8;
-
     display: flex;
+
     align-items: center;
+
+    gap: 30px;
 
     padding: 15px 30px;
 
-    gap: 30px;
-}
-
-.infoPage {
-    display: none;
-}
-
-
-
-.info-header {
-    width: 100%;
-    min-height: 90px;
-
     background: #1683e8;
-
-    display: flex;
-    align-items: center;
-
-    padding: 15px 30px;
-
-    gap: 30px;
 }
 
-.info-header h1 {
+
+/* Page title */
+
+.page-title {
     color: white;
 
     font-size: 32px;
+
+    font-weight: 800;
 }
 
 
-
-.info-content {
-    width: 100%;
-    max-width: 1000px;
-
-    margin: 0 auto;
-
-    padding: 60px 30px;
-}
-
-
+/* ==================================================
+   BACK BUTTON
+   ================================================== */
 
 .back-button {
     height: 55px;
+
     padding: 0 25px;
 
     border: none;
     border-radius: 0;
 
     background: white;
+
     color: #1683e8;
 
     font-size: 20px;
@@ -197,22 +238,35 @@ body {
 
     transition:
         transform 0.1s ease,
-        box-shadow 0.1s ease;
+        box-shadow 0.1s ease,
+        background 0.1s ease;
 }
+
 
 .back-button:hover {
     background: #eeeeee;
 }
 
+
 .back-button:active {
     transform: translate(4px, 4px);
+
     box-shadow: 2px 2px 0 #07539b;
 }
 
+
+/* ==================================================
+   KAPITEL BUTTONS
+   ================================================== */
+
 .section-buttons {
     display: flex;
+
     gap: 12px;
+
+    flex-wrap: wrap;
 }
+
 
 .section-button {
     height: 55px;
@@ -223,6 +277,7 @@ body {
     border-radius: 0;
 
     background: transparent;
+
     color: white;
 
     font-size: 18px;
@@ -235,20 +290,29 @@ body {
         color 0.15s ease;
 }
 
+
 .section-button:hover {
     background: white;
+
     color: #1683e8;
 }
+
 
 .section-button.active {
     background: white;
+
     color: #1683e8;
 }
 
 
+/* ==================================================
+   RULES CONTENT
+   ================================================== */
+
 .rules-content {
     width: 100%;
-    max-width: 1000px;
+
+    max-width: 1100px;
 
     margin: 0 auto;
 
@@ -256,29 +320,269 @@ body {
 }
 
 
+/* Rule section */
+
 .rule-section {
     display: none;
 
     color: black;
+
+    animation: fadeIn 0.2s ease;
 }
 
+
+/* Rule heading */
 
 .rule-section h1 {
     color: #1683e8;
 
-    font-size: 40px;
+    font-size: 36px;
+
+    line-height: 1.25;
 
     margin-bottom: 30px;
 }
 
 
+/* Text loaded from TXT */
+
 .rules-text {
     color: black;
 
     font-size: 18px;
+
     line-height: 1.7;
 
     white-space: pre-wrap;
 
     overflow-wrap: break-word;
+}
+
+
+/* ==================================================
+   INFO PAGE
+   ================================================== */
+
+.info-content {
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 60px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+
+/* Info cards */
+
+.info-card {
+    width: 100%;
+
+    padding: 30px;
+
+    background: #f7f7f7;
+
+    border-left: 6px solid #1683e8;
+
+    box-shadow: 6px 6px 0 #dddddd;
+}
+
+
+.info-card h2 {
+    margin-bottom: 20px;
+
+    color: #1683e8;
+
+    font-size: 28px;
+}
+
+
+/* Info items */
+
+.info-item {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #dddddd;
+}
+
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+
+.info-label {
+    color: #666666;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+
+.info-value {
+    color: #000000;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    text-align: right;
+}
+
+
+/* Plugin link */
+
+.plugin-link {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 15px 18px;
+
+    background: #1683e8;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    box-shadow: 5px 5px 0 #07539b;
+
+    transition:
+        transform 0.1s ease,
+        box-shadow 0.1s ease,
+        background 0.1s ease;
+}
+
+
+.plugin-link:hover {
+    background: #2695f5;
+}
+
+
+.plugin-link:active {
+    transform: translate(4px, 4px);
+
+    box-shadow: 1px 1px 0 #07539b;
+}
+
+
+/* ==================================================
+   ANIMATION
+   ================================================== */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+   ================================================== */
+
+@media (max-width: 700px) {
+
+    .page-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 15px 20px;
+
+        gap: 15px;
+    }
+
+
+    .section-buttons {
+        width: 100%;
+    }
+
+
+    .section-button {
+        flex: 1;
+
+        padding: 0 15px;
+
+        min-width: 0;
+    }
+
+
+    .rules-content {
+        padding: 35px 20px;
+    }
+
+
+    .rule-section h1 {
+        font-size: 28px;
+    }
+
+
+    .rules-text {
+        font-size: 16px;
+    }
+
+
+    .info-content {
+        padding: 35px 20px;
+    }
+
+
+    .info-card {
+        padding: 22px;
+    }
+
+
+    .info-item {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+    }
+
+
+    .info-value {
+        text-align: left;
+    }
+
+
+    .logo {
+        width: 220px;
+
+        top: -250px;
+    }
+
 }

@@ -11,7 +11,9 @@
 
 <body>
 
-    <!-- ================= MENU ================= -->
+    <!-- ==================================================
+         MAIN MENU
+         ================================================== -->
 
     <div id="menuPage">
 
@@ -22,6 +24,12 @@
 
             <div class="menu">
 
+                <img
+                    src="assets/Logo.png"
+                    alt="EpokSMP Logo"
+                    class="logo"
+                >
+
                 <button class="menu-button" onclick="showRules()">
                     Laws
                 </button>
@@ -30,11 +38,12 @@
                     Info
                 </button>
 
-                <a href="https://divaddeveloper.github.io/EpokMaps/" class="menu-button">
+                <a
+                    href="https://divaddeveloper.github.io/EpokMaps/"
+                    class="menu-button"
+                >
                     Map
                 </a>
-
-                <img src="assets/Logo.png" alt="EpokSMP Logo" class="logo">
 
             </div>
 
@@ -43,11 +52,13 @@
     </div>
 
 
-    <!-- ================= LAWS PAGE ================= -->
+    <!-- ==================================================
+         LAWS PAGE
+         ================================================== -->
 
     <div id="rulesPage" class="sub-page">
 
-        <header class="rules-header">
+        <header class="page-header">
 
             <button class="back-button" onclick="showMenu()">
                 ← Back
@@ -58,21 +69,24 @@
                 <button
                     onclick="showSection(1)"
                     class="section-button active"
-                    id="sectionButton1">
+                    id="sectionButton1"
+                >
                     Kapitel 1
                 </button>
 
                 <button
                     onclick="showSection(2)"
                     class="section-button"
-                    id="sectionButton2">
+                    id="sectionButton2"
+                >
                     Kapitel 2
                 </button>
 
                 <button
                     onclick="showSection(3)"
                     class="section-button"
-                    id="sectionButton3">
+                    id="sectionButton3"
+                >
                     Kapitel 3
                 </button>
 
@@ -82,6 +96,8 @@
 
 
         <main class="rules-content">
+
+            <!-- Kapitel 1 -->
 
             <section id="section1" class="rule-section">
 
@@ -96,6 +112,8 @@
             </section>
 
 
+            <!-- Kapitel 2 -->
+
             <section id="section2" class="rule-section">
 
                 <h1>
@@ -108,6 +126,8 @@
 
             </section>
 
+
+            <!-- Kapitel 3 -->
 
             <section id="section3" class="rule-section">
 
@@ -126,80 +146,176 @@
     </div>
 
 
-    <!-- ================= INFO PAGE ================= -->
+    <!-- ==================================================
+         INFO PAGE
+         ================================================== -->
 
     <div id="infoPage" class="sub-page">
 
-        <header class="info-header">
+        <header class="page-header">
 
             <button class="back-button" onclick="showMenu()">
                 ← Back
             </button>
 
-            <h1>Info</h1>
+            <h1 class="page-title">
+                Info
+            </h1>
 
         </header>
 
 
         <main class="info-content">
 
-            <div id="info-text" class="rules-text">
-                Loading...
-            </div>
+            <!-- General information -->
+
+            <section class="info-card">
+
+                <h2>About EpokSMP</h2>
+
+                <div id="info-text" class="rules-text">
+                    Loading...
+                </div>
+
+            </section>
+
+
+            <!-- Server information -->
+
+            <section class="info-card">
+
+                <h2>Server</h2>
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        IP
+                    </span>
+
+                    <span class="info-value">
+                        EpokSMP.exaroton.me
+                    </span>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Version
+                    </span>
+
+                    <span class="info-value">
+                        26.3
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- Plugins -->
+
+            <section class="info-card">
+
+                <h2>Plugins</h2>
+
+                <a
+                    class="plugin-link"
+                    href="https://modrinth.com/plugin/simple-voice-chat?version=26.3&loader=fabric#download"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Simple Voice Chat
+                    <span>↗</span>
+                </a>
+
+            </section>
 
         </main>
 
     </div>
 
 
-    <!-- ================= JAVASCRIPT ================= -->
+    <!-- ==================================================
+         JAVASCRIPT
+         ================================================== -->
 
     <script>
 
-        /* ================= MENU ================= */
+        /* =========================
+           PAGE NAVIGATION
+           ========================= */
 
         function showMenu() {
 
             document.getElementById("menuPage").style.display = "block";
-
             document.getElementById("rulesPage").style.display = "none";
-
             document.getElementById("infoPage").style.display = "none";
 
         }
 
 
-        /* ================= LAWS ================= */
-
         function showRules() {
 
             document.getElementById("menuPage").style.display = "none";
-
-            document.getElementById("infoPage").style.display = "none";
-
             document.getElementById("rulesPage").style.display = "block";
+            document.getElementById("infoPage").style.display = "none";
 
             showSection(1);
 
         }
 
 
+        function showInfo() {
+
+            document.getElementById("menuPage").style.display = "none";
+            document.getElementById("rulesPage").style.display = "none";
+            document.getElementById("infoPage").style.display = "block";
+
+        }
+
+
+        /* =========================
+           KAPITEL NAVIGATION
+           ========================= */
+
         function showSection(sectionNumber) {
 
+            /*
+             * Hide every Kapitel
+             */
+
             document.querySelectorAll(".rule-section").forEach(section => {
+
                 section.style.display = "none";
+
             });
 
+
+            /*
+             * Remove active state
+             */
 
             document.querySelectorAll(".section-button").forEach(button => {
+
                 button.classList.remove("active");
+
             });
 
+
+            /*
+             * Show selected Kapitel
+             */
 
             document.getElementById(
                 "section" + sectionNumber
             ).style.display = "block";
 
+
+            /*
+             * Highlight selected button
+             */
 
             document.getElementById(
                 "sectionButton" + sectionNumber
@@ -208,64 +324,74 @@
         }
 
 
-        /* ================= INFO ================= */
+        /* =========================
+           LOAD TEXT FILES
+           ========================= */
 
-        function showInfo() {
-
-            document.getElementById("menuPage").style.display = "none";
-
-            document.getElementById("rulesPage").style.display = "none";
-
-            document.getElementById("infoPage").style.display = "block";
-
-        }
-
-
-        /* ================= LOAD TEXT FILES ================= */
-
-        async function loadRules() {
+        async function loadTextFile(file, elementId) {
 
             try {
 
-                const chapter1 = await fetch("./rules/kapitel1.txt");
-                const chapter1Text = await chapter1.text();
+                const response = await fetch(file);
 
-                document.getElementById("chapter1-text").textContent = chapter1Text;
+                if (!response.ok) {
 
+                    throw new Error(
+                        `Could not load ${file}: ${response.status}`
+                    );
 
-                const chapter2 = await fetch("./rules/kapitel2.txt");
-                const chapter2Text = await chapter2.text();
+                }
 
-                document.getElementById("chapter2-text").textContent = chapter2Text;
+                const text = await response.text();
 
-
-                const chapter3 = await fetch("./rules/kapitel3.txt");
-                const chapter3Text = await chapter3.text();
-
-                document.getElementById("chapter3-text").textContent = chapter3Text;
-
-
-                /* Load Info */
-
-                const info = await fetch("./info.txt");
-                const infoText = await info.text();
-
-                document.getElementById("info-text").textContent = infoText;
-
+                document.getElementById(elementId).textContent = text;
 
             } catch (error) {
 
-                console.error("Could not load text files:", error);
+                console.error(error);
+
+                document.getElementById(elementId).textContent =
+                    "Could not load this file.";
 
             }
 
         }
 
 
+        async function loadRules() {
+
+            loadTextFile(
+                "./rules/kapitel1.txt",
+                "chapter1-text"
+            );
+
+            loadTextFile(
+                "./rules/kapitel2.txt",
+                "chapter2-text"
+            );
+
+            loadTextFile(
+                "./rules/kapitel3.txt",
+                "chapter3-text"
+            );
+
+            loadTextFile(
+                "./info.txt",
+                "info-text"
+            );
+
+        }
+
+
+        /* =========================
+           START
+           ========================= */
+
+        showMenu();
+        showSection(1);
         loadRules();
 
     </script>
 
 </body>
 </html>
-
