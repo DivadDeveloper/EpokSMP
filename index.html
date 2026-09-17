@@ -11,6 +11,8 @@
 
 <body>
 
+    <!-- ================= MENU ================= -->
+
     <div id="menuPage">
 
         <div class="background"></div>
@@ -21,10 +23,10 @@
             <div class="menu">
 
                 <button class="menu-button" onclick="showRules()">
-                    Rules
+                    Laws
                 </button>
 
-                <button class="menu-button">
+                <button class="menu-button" onclick="showInfo()">
                     Info
                 </button>
 
@@ -41,7 +43,9 @@
     </div>
 
 
-    <div id="rulesPage" class="rules-page">
+    <!-- ================= LAWS PAGE ================= -->
+
+    <div id="rulesPage" class="sub-page">
 
         <header class="rules-header">
 
@@ -76,52 +80,108 @@
 
         </header>
 
+
         <main class="rules-content">
 
             <section id="section1" class="rule-section">
-                <h1>Kapitel 1 -  Lagarna gällande tal och uttryckande genom röst och text</h1>
+
+                <h1>
+                    Kapitel 1 - Lagarna gällande tal och uttryckande genom röst och text
+                </h1>
 
                 <div id="chapter1-text" class="rules-text">
                     Loading...
                 </div>
+
             </section>
 
 
             <section id="section2" class="rule-section">
-                <h1>Kapitel 2 - Lagarna gällande MINECRAFT™ servern “EpokSMP”</h1>
+
+                <h1>
+                    Kapitel 2 - Lagarna gällande MINECRAFT™ servern “EpokSMP”
+                </h1>
 
                 <div id="chapter2-text" class="rules-text">
                     Loading...
                 </div>
+
             </section>
 
 
             <section id="section3" class="rule-section">
-                <h1>Kapitel 3 - Lagarna gällande straff</h1>
+
+                <h1>
+                    Kapitel 3 - Lagarna gällande straff
+                </h1>
 
                 <div id="chapter3-text" class="rules-text">
                     Loading...
                 </div>
+
             </section>
 
         </main>
 
     </div>
 
+
+    <!-- ================= INFO PAGE ================= -->
+
+    <div id="infoPage" class="sub-page">
+
+        <header class="info-header">
+
+            <button class="back-button" onclick="showMenu()">
+                ← Back
+            </button>
+
+            <h1>Info</h1>
+
+        </header>
+
+
+        <main class="info-content">
+
+            <div id="info-text" class="rules-text">
+                Loading...
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
     <script>
 
+        /* ================= MENU ================= */
+
+        function showMenu() {
+
+            document.getElementById("menuPage").style.display = "block";
+
+            document.getElementById("rulesPage").style.display = "none";
+
+            document.getElementById("infoPage").style.display = "none";
+
+        }
+
+
+        /* ================= LAWS ================= */
+
         function showRules() {
+
             document.getElementById("menuPage").style.display = "none";
+
+            document.getElementById("infoPage").style.display = "none";
+
             document.getElementById("rulesPage").style.display = "block";
 
             showSection(1);
-        }
 
-        function showMenu() {
-            document.getElementById("rulesPage").style.display = "none";
-            document.getElementById("menuPage").style.display = "block";
         }
-
 
 
         function showSection(sectionNumber) {
@@ -130,48 +190,76 @@
                 section.style.display = "none";
             });
 
+
             document.querySelectorAll(".section-button").forEach(button => {
                 button.classList.remove("active");
             });
+
 
             document.getElementById(
                 "section" + sectionNumber
             ).style.display = "block";
 
+
             document.getElementById(
                 "sectionButton" + sectionNumber
             ).classList.add("active");
+
         }
+
+
+        /* ================= INFO ================= */
+
+        function showInfo() {
+
+            document.getElementById("menuPage").style.display = "none";
+
+            document.getElementById("rulesPage").style.display = "none";
+
+            document.getElementById("infoPage").style.display = "block";
+
+        }
+
+
+        /* ================= LOAD TEXT FILES ================= */
 
         async function loadRules() {
 
             try {
 
-                const chapter1 = await fetch("rules/kapitel1.txt");
+                const chapter1 = await fetch("./rules/kapitel1.txt");
                 const chapter1Text = await chapter1.text();
 
                 document.getElementById("chapter1-text").textContent = chapter1Text;
 
 
-                const chapter2 = await fetch("rules/kapitel2.txt");
+                const chapter2 = await fetch("./rules/kapitel2.txt");
                 const chapter2Text = await chapter2.text();
 
                 document.getElementById("chapter2-text").textContent = chapter2Text;
 
 
-                const chapter3 = await fetch("rules/kapitel3.txt");
+                const chapter3 = await fetch("./rules/kapitel3.txt");
                 const chapter3Text = await chapter3.text();
 
                 document.getElementById("chapter3-text").textContent = chapter3Text;
 
+
+                /* Load Info */
+
+                const info = await fetch("./info.txt");
+                const infoText = await info.text();
+
+                document.getElementById("info-text").textContent = infoText;
+
+
             } catch (error) {
 
-                console.error("Could not load rules:", error);
+                console.error("Could not load text files:", error);
 
             }
 
         }
-
 
 
         loadRules();
@@ -180,3 +268,4 @@
 
 </body>
 </html>
+

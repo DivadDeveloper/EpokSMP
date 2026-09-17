@@ -139,6 +139,44 @@ body {
     gap: 30px;
 }
 
+.infoPage {
+    display: none;
+}
+
+
+
+.info-header {
+    width: 100%;
+    min-height: 90px;
+
+    background: #1683e8;
+
+    display: flex;
+    align-items: center;
+
+    padding: 15px 30px;
+
+    gap: 30px;
+}
+
+.info-header h1 {
+    color: white;
+
+    font-size: 32px;
+}
+
+
+
+.info-content {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 60px 30px;
+}
+
+
 
 .back-button {
     height: 55px;
