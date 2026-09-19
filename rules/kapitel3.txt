@@ -67,3 +67,18 @@ Lag 3:5 - Lagen om brottsregistret
 
 
 3§ Undantag kan tas till 2§ ifall en eller flera av ägarna av EpokSMP godkänner att brottsregistret rensas för en individ.
+
+
+Lag 3:6 - Lagen om utdelning av straff för gärningar som sker utanför EpokSMP
+
+1§ Alla lagar inom detta dokument skall även vara aktiva utanför Discord® servern vid namn “EpokSMP”, samt MINECRAFT™ servern “EpokSMP”.
+
+1.1§ Med detta, så skall alla straff som utdelas för brott mot en eller flera av lagarna inom detta dokument, vara möjliga att utdelas för gärningar som sker utanför Discord® servern vid namn “EpokSMP”, samt MINECRAFT™ servern “EpokSMP”.
+
+2§ Undantag kan tas till brott mot lagen som sker på en annan MINECRAFT™ server än EpokSMP.
+
+2.1§ Med detta, så skall undantag tas till lagarna inom kap. 2.
+
+2.2§ Brott mot lagarna inom kap.1 skall fortfarande innebära utdelning av straff ifall det sker på en annan MINECRAFT™ server än EpokSMP.
+
+3§ Straffet som tas emot skall vara likadant som respektive lagar som har begåtts ett brott mot.
