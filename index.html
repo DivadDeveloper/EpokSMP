@@ -1,397 +1,435 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>EpokSMP</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ==================================================
-         MAIN MENU
-         ================================================== -->
+<div id="menuPage">
 
-    <div id="menuPage">
+<div class="background"></div>
+<div class="overlay"></div>
 
-        <div class="background"></div>
-        <div class="overlay"></div>
+<div class="version">v1.1</div>
 
-        <main class="content">
+<main class="content">
 
-            <div class="menu">
+    <div class="menu">
 
-                <img
-                    src="assets/Logo.png"
-                    alt="EpokSMP Logo"
-                    class="logo"
-                >
+        <img
+            src="assets/Logo.png"
+            alt="EpokSMP Logo"
+            class="logo"
+        >
 
-                <button class="menu-button" onclick="showRules()">
-                    Laws
-                </button>
+        <button class="menu-button" onclick="showRules()">
+            Laws
+        </button>
 
-                <button class="menu-button" onclick="showInfo()">
-                    Info
-                </button>
+        <button class="menu-button" onclick="showInfo()">
+            Info
+        </button>
 
-                <a
-                    href="https://divaddeveloper.github.io/EpokMaps/"
-                    class="menu-button"
-                >
-                    Map
-                </a>
-
-            </div>
-
-        </main>
+        <a
+            href="https://divaddeveloper.github.io/EpokMaps/"
+            class="menu-button"
+        >
+            Map
+        </a>
 
     </div>
 
+</main>
 
-    <!-- ==================================================
-         LAWS PAGE
-         ================================================== -->
+</div>
 
-    <div id="rulesPage" class="sub-page">
+<div id="rulesPage" class="sub-page">
 
-        <header class="page-header">
+<header class="page-header">
 
-            <button class="back-button" onclick="showMenu()">
-                ← Back
-            </button>
+    <button class="back-button" onclick="showMenu()">
+        ← Back
+    </button>
 
-            <div class="section-buttons">
+    <div class="section-buttons">
 
-                <button
-                    onclick="showSection(1)"
-                    class="section-button active"
-                    id="sectionButton1"
-                >
-                    Kapitel 1
-                </button>
+        <button
+            onclick="showSection(1)"
+            class="section-button active"
+            id="sectionButton1"
+        >
+            Kapitel 1
+        </button>
 
-                <button
-                    onclick="showSection(2)"
-                    class="section-button"
-                    id="sectionButton2"
-                >
-                    Kapitel 2
-                </button>
+        <button
+            onclick="showSection(2)"
+            class="section-button"
+            id="sectionButton2"
+        >
+            Kapitel 2
+        </button>
 
-                <button
-                    onclick="showSection(3)"
-                    class="section-button"
-                    id="sectionButton3"
-                >
-                    Kapitel 3
-                </button>
-
-            </div>
-
-        </header>
-
-
-        <main class="rules-content">
-
-            <!-- Kapitel 1 -->
-
-            <section id="section1" class="rule-section">
-
-                <h1>
-                    Kapitel 1 - Lagarna gällande tal och uttryckande genom röst och text
-                </h1>
-
-                <div id="chapter1-text" class="rules-text">
-                    Loading...
-                </div>
-
-            </section>
-
-
-            <!-- Kapitel 2 -->
-
-            <section id="section2" class="rule-section">
-
-                <h1>
-                    Kapitel 2 - Lagarna gällande MINECRAFT™ servern “EpokSMP”
-                </h1>
-
-                <div id="chapter2-text" class="rules-text">
-                    Loading...
-                </div>
-
-            </section>
-
-
-            <!-- Kapitel 3 -->
-
-            <section id="section3" class="rule-section">
-
-                <h1>
-                    Kapitel 3 - Lagarna gällande straff
-                </h1>
-
-                <div id="chapter3-text" class="rules-text">
-                    Loading...
-                </div>
-
-            </section>
-
-        </main>
+        <button
+            onclick="showSection(3)"
+            class="section-button"
+            id="sectionButton3"
+        >
+            Kapitel 3
+        </button>
 
     </div>
 
+</header>
 
-    <!-- ==================================================
-         INFO PAGE
-         ================================================== -->
+<main class="rules-content">
 
-    <div id="infoPage" class="sub-page">
+    <section id="section1" class="rule-section">
 
-        <header class="page-header">
+        <h1>
+            Kapitel 1 - Lagarna gällande tal och uttryckande genom röst och text
+        </h1>
 
-            <button class="back-button" onclick="showMenu()">
-                ← Back
-            </button>
+        <div id="chapter1-text" class="rules-text">
+            Loading...
+        </div>
 
-            <h1 class="page-title">
-                Info
-            </h1>
+    </section>
 
-        </header>
+    <section id="section2" class="rule-section">
 
+        <h1>
+            Kapitel 2 - Lagarna gällande MINECRAFT™ servern “EpokSMP”
+        </h1>
 
-        <main class="info-content">
+        <div id="chapter2-text" class="rules-text">
+            Loading...
+        </div>
 
-            <!-- General information -->
+    </section>
 
-            <section class="info-card">
+    <section id="section3" class="rule-section">
 
-                <h2>About EpokSMP</h2>
+        <h1>
+            Kapitel 3 - Lagarna gällande straff
+        </h1>
 
-                <div id="info-text" class="rules-text">
-                    Loading...
-                </div>
+        <div id="chapter3-text" class="rules-text">
+            Loading...
+        </div>
 
-            </section>
+    </section>
 
+</main>
 
-            <!-- Server information -->
+</div>
 
-            <section class="info-card">
+<div id="infoPage" class="sub-page">
 
-                <h2>Server</h2>
+<header class="page-header">
 
-                <div class="info-item">
+    <button class="back-button" onclick="showMenu()">
+        ← Back
+    </button>
 
-                    <span class="info-label">
-                        IP
-                    </span>
+    <h1 class="page-title">
+        Info
+    </h1>
 
-                    <span class="info-value">
-                        EpokSMP.exaroton.me
-                    </span>
+</header>
 
-                </div>
+<main class="info-content">
 
+    <section class="info-card">
 
-                <div class="info-item">
+        <h2>About EpokSMP</h2>
 
-                    <span class="info-label">
-                        Version
-                    </span>
+        <div id="info-text" class="rules-text">
+            Loading...
+        </div>
 
-                    <span class="info-value">
-                        26.3
-                    </span>
+    </section>
 
-                </div>
+    <section class="info-card">
 
-            </section>
+        <h2>Server</h2>
 
+        <div class="info-item">
 
-            <!-- Plugins -->
+            <span class="info-label">
+                IP
+            </span>
 
-            <section class="info-card">
+            <span class="info-value">
+                EpokSMP.exaroton.me
+            </span>
 
-                <h2>Plugins</h2>
+        </div>
 
-                <a
-                    class="plugin-link"
-                    href="https://modrinth.com/plugin/simple-voice-chat?version=26.3&loader=fabric#download"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Simple Voice Chat
-                    <span>↗</span>
-                </a>
+        <div class="info-item">
 
-            </section>
+            <span class="info-label">
+                Version
+            </span>
 
-        </main>
+            <span class="info-value">
+                26.3
+            </span>
 
-    </div>
+        </div>
 
+         <div class="info-item">
 
-    <!-- ==================================================
-         JAVASCRIPT
-         ================================================== -->
+            <span class="info-label">
+                RAM
+            </span>
 
-    <script>
+            <span class="info-value">
+                DDR5 4GB
+            </span>
 
-        /* =========================
-           PAGE NAVIGATION
-           ========================= */
+        </div>
 
-        function showMenu() {
+            <div class="info-item">
 
-            document.getElementById("menuPage").style.display = "block";
-            document.getElementById("rulesPage").style.display = "none";
-            document.getElementById("infoPage").style.display = "none";
+            <span class="info-label">
+                CPU
+            </span>
 
-        }
+            <span class="info-value">
+                AMD RYZEN™ 9950X 2 Cores
+            </span>
 
+        </div>
 
-        function showRules() {
+    </section>
 
-            document.getElementById("menuPage").style.display = "none";
-            document.getElementById("rulesPage").style.display = "block";
-            document.getElementById("infoPage").style.display = "none";
+    <section class="info-card">
 
-            showSection(1);
+        <h2>Plugins</h2>
 
-        }
+        <a
+            class="plugin-link"
+            href="https://modrinth.com/plugin/simple-voice-chat?version=26.3&loader=fabric#download"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Simple Voice Chat
+            <span>↗</span>
+        </a>
 
+        <a
+            class="plugin-link"
+            href="https://modrinth.com/plugin/treetimber-v2"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            TreeTimber v2 (No Download Needed)
+            <span>↗</span>
+        </a>
 
-        function showInfo() {
+        <a
+            class="plugin-link"
+            href="https://modrinth.com/plugin/luckperms"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            LuckPerms (No Download Needed)
+            <span>↗</span>
+        </a>
 
-            document.getElementById("menuPage").style.display = "none";
-            document.getElementById("rulesPage").style.display = "none";
-            document.getElementById("infoPage").style.display = "block";
+    </section>
 
-        }
+    <section class="info-card">
 
+        <h2>Roles</h2>
 
-        /* =========================
-           KAPITEL NAVIGATION
-           ========================= */
+        <div class="info-item">
 
-        function showSection(sectionNumber) {
+            <span class="info-label">
+                DivadDev_
+            </span>
 
-            /*
-             * Hide every Kapitel
-             */
+            <span class="info-value">
+                Owner
+            </span>
 
-            document.querySelectorAll(".rule-section").forEach(section => {
+        </div>
 
-                section.style.display = "none";
+        <div class="info-item">
 
-            });
+            <span class="info-label">
+                Tobbe_Lobbe
+            </span>
 
+            <span class="info-value">
+                Owner
+            </span>
 
-            /*
-             * Remove active state
-             */
+        </div>
 
-            document.querySelectorAll(".section-button").forEach(button => {
+        <div class="info-item">
 
-                button.classList.remove("active");
+            <span class="info-label">
+                FreakyFilip67
+            </span>
 
-            });
+            <span class="info-value">
+                Server Helper
+            </span>
 
+        </div>
 
-            /*
-             * Show selected Kapitel
-             */
+        <div class="info-item">
 
-            document.getElementById(
-                "section" + sectionNumber
-            ).style.display = "block";
+            <span class="info-label">
+                ItzNix_
+            </span>
 
+            <span class="info-value">
+                Moderator
+            </span>
 
-            /*
-             * Highlight selected button
-             */
+        </div>
 
-            document.getElementById(
-                "sectionButton" + sectionNumber
-            ).classList.add("active");
+        <div class="info-item">
 
-        }
+            <span class="info-label">
+                skelett_
+            </span>
 
+            <span class="info-value">
+                Moderator
+            </span>
 
-        /* =========================
-           LOAD TEXT FILES
-           ========================= */
+        </div>
 
-        async function loadTextFile(file, elementId) {
+    </section>
 
-            try {
+</main>
 
-                const response = await fetch(file);
 
-                if (!response.ok) {
+</div>
 
-                    throw new Error(
-                        `Could not load ${file}: ${response.status}`
-                    );
+<script>
 
-                }
+    function animateMenu() {
 
-                const text = await response.text();
+        const menuPage = document.getElementById("menuPage");
 
-                document.getElementById(elementId).textContent = text;
+        menuPage.classList.remove("menu-enter");
 
-            } catch (error) {
+        void menuPage.offsetWidth;
 
-                console.error(error);
+        menuPage.classList.add("menu-enter");
+    }
 
-                document.getElementById(elementId).textContent =
-                    "Could not load this file.";
+    function showMenu() {
 
+        document.getElementById("menuPage").style.display = "block";
+        document.getElementById("rulesPage").style.display = "none";
+        document.getElementById("infoPage").style.display = "none";
+
+        animateMenu();
+    }
+
+    function showRules() {
+
+        document.getElementById("menuPage").style.display = "none";
+        document.getElementById("rulesPage").style.display = "block";
+        document.getElementById("infoPage").style.display = "none";
+
+        document.getElementById("rulesPage").classList.remove("page-enter");
+
+        void document.getElementById("rulesPage").offsetWidth;
+
+        document.getElementById("rulesPage").classList.add("page-enter");
+
+        showSection(1);
+    }
+
+    function showInfo() {
+
+        document.getElementById("menuPage").style.display = "none";
+        document.getElementById("rulesPage").style.display = "none";
+        document.getElementById("infoPage").style.display = "block";
+
+        document.getElementById("infoPage").classList.remove("page-enter");
+
+        void document.getElementById("infoPage").offsetWidth;
+
+        document.getElementById("infoPage").classList.add("page-enter");
+    }
+
+    function showSection(sectionNumber) {
+
+        document.querySelectorAll(".rule-section").forEach(section => {
+            section.style.display = "none";
+        });
+
+        document.querySelectorAll(".section-button").forEach(button => {
+            button.classList.remove("active");
+        });
+
+        const selectedSection = document.getElementById(
+            "section" + sectionNumber
+        );
+
+        selectedSection.style.display = "block";
+
+        selectedSection.classList.remove("section-enter");
+
+        void selectedSection.offsetWidth;
+
+        selectedSection.classList.add("section-enter");
+
+        document.getElementById(
+            "sectionButton" + sectionNumber
+        ).classList.add("active");
+    }
+
+    async function loadTextFile(file, elementId) {
+
+        try {
+
+            const response = await fetch(file);
+
+            if (!response.ok) {
+                throw new Error(
+                    `Could not load ${file}: ${response.status}`
+                );
             }
 
+            const text = await response.text();
+
+            document.getElementById(elementId).textContent = text;
+
+        } catch (error) {
+
+            console.error(error);
+
+            document.getElementById(elementId).textContent =
+                "Could not load this file.";
         }
+    }
 
+    async function loadRules() {
 
-        async function loadRules() {
+        loadTextFile("./rules/kapitel1.txt", "chapter1-text");
+        loadTextFile("./rules/kapitel2.txt", "chapter2-text");
+        loadTextFile("./rules/kapitel3.txt", "chapter3-text");
+        loadTextFile("./info.txt", "info-text");
+    }
 
-            loadTextFile(
-                "./rules/kapitel1.txt",
-                "chapter1-text"
-            );
+    showMenu();
+    showSection(1);
+    loadRules();
 
-            loadTextFile(
-                "./rules/kapitel2.txt",
-                "chapter2-text"
-            );
-
-            loadTextFile(
-                "./rules/kapitel3.txt",
-                "chapter3-text"
-            );
-
-            loadTextFile(
-                "./info.txt",
-                "info-text"
-            );
-
-        }
-
-
-        /* =========================
-           START
-           ========================= */
-
-        showMenu();
-        showSection(1);
-        loadRules();
-
-    </script>
+</script>
 
 </body>
 </html>
