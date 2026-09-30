@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EpokSMP</title>
+    <link rel="icon" type="image/x-icon" href="assets/Logo_Hall.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,34 +16,40 @@
 <div class="background"></div>
 <div class="overlay"></div>
 
-<div class="version">v1.1</div>
+<div class="version">v1.2</div>
 
 <main class="content">
 
-    <div class="menu">
 
-        <img
-            src="assets/Logo.png"
-            alt="EpokSMP Logo"
-            class="logo"
-        >
+<div class="menu">
 
-        <button class="menu-button" onclick="showRules()">
-            Laws
-        </button>
+    <img
+        src="assets/Logo_Hall.png"
+        alt="EpokSMP Logo"
+        class="logo"
+    >
 
-        <button class="menu-button" onclick="showInfo()">
-            Info
-        </button>
+    <button class="menu-button" onclick="showRules()">
+        Laws
+    </button>
 
-        <a
-            href="https://divaddeveloper.github.io/EpokMaps/"
-            class="menu-button"
-        >
-            Map
-        </a>
+    <button class="menu-button" onclick="showInfo()">
+        Info
+    </button>
 
-    </div>
+    <a
+        href="https://divaddeveloper.github.io/EpokMaps/"
+        class="menu-button"
+    >
+        Map ↗
+    </a>
+
+    <button class="menu-button news-button" onclick="showNews()">
+        News
+    </button>
+
+</div>
+
 
 </main>
 
@@ -52,77 +59,80 @@
 
 <header class="page-header">
 
-    <button class="back-button" onclick="showMenu()">
-        ← Back
+
+<button class="back-button" onclick="showMenu()">
+    ← Back
+</button>
+
+<div class="section-buttons">
+
+    <button
+        onclick="showSection(1)"
+        class="section-button active"
+        id="sectionButton1"
+    >
+        Kapitel 1
     </button>
 
-    <div class="section-buttons">
+    <button
+        onclick="showSection(2)"
+        class="section-button"
+        id="sectionButton2"
+    >
+        Kapitel 2
+    </button>
 
-        <button
-            onclick="showSection(1)"
-            class="section-button active"
-            id="sectionButton1"
-        >
-            Kapitel 1
-        </button>
+    <button
+        onclick="showSection(3)"
+        class="section-button"
+        id="sectionButton3"
+    >
+        Kapitel 3
+    </button>
 
-        <button
-            onclick="showSection(2)"
-            class="section-button"
-            id="sectionButton2"
-        >
-            Kapitel 2
-        </button>
+</div>
 
-        <button
-            onclick="showSection(3)"
-            class="section-button"
-            id="sectionButton3"
-        >
-            Kapitel 3
-        </button>
-
-    </div>
 
 </header>
 
 <main class="rules-content">
 
-    <section id="section1" class="rule-section">
+<section id="section1" class="rule-section">
 
-        <h1>
-            Kapitel 1 - Lagarna gällande tal och uttryckande genom röst och text
-        </h1>
+    <h1>
+        Kapitel 1 - Lagarna gällande tal och uttryckande genom röst och text
+    </h1>
 
-        <div id="chapter1-text" class="rules-text">
-            Loading...
-        </div>
+    <div id="chapter1-text" class="rules-text">
+        Loading...
+    </div>
 
-    </section>
+</section>
 
-    <section id="section2" class="rule-section">
+<section id="section2" class="rule-section">
 
-        <h1>
-            Kapitel 2 - Lagarna gällande MINECRAFT™ servern “EpokSMP”
-        </h1>
+    <h1>
+        Kapitel 2 - Lagarna gällande MINECRAFT™ servern “EpokSMP”
+    </h1>
 
-        <div id="chapter2-text" class="rules-text">
-            Loading...
-        </div>
+    <div id="chapter2-text" class="rules-text">
+        Loading...
+    </div>
 
-    </section>
+</section>
 
-    <section id="section3" class="rule-section">
+<section id="section3" class="rule-section">
 
-        <h1>
-            Kapitel 3 - Lagarna gällande straff
-        </h1>
+    <h1>
+        Kapitel 3 - Lagarna gällande straff
+    </h1>
 
-        <div id="chapter3-text" class="rules-text">
-            Loading...
-        </div>
+    <div id="chapter3-text" class="rules-text">
+        Loading...
+    </div>
 
-    </section>
+</section>
+
 
 </main>
 
@@ -132,186 +142,254 @@
 
 <header class="page-header">
 
-    <button class="back-button" onclick="showMenu()">
-        ← Back
-    </button>
 
-    <h1 class="page-title">
-        Info
-    </h1>
+<button class="back-button" onclick="showMenu()">
+    ← Back
+</button>
+
+<h1 class="page-title">
+    Info
+</h1>
+
 
 </header>
 
 <main class="info-content">
 
-    <section class="info-card">
 
-        <h2>About EpokSMP</h2>
+<section class="info-card">
 
-        <div id="info-text" class="rules-text">
-            Loading...
-        </div>
+    <h2>About EpokSMP</h2>
 
-    </section>
+    <div id="info-text" class="rules-text">
+        Loading...
+    </div>
 
-    <section class="info-card">
+</section>
 
-        <h2>Server</h2>
+<section class="info-card">
 
-        <div class="info-item">
+    <h2>Server</h2>
 
-            <span class="info-label">
-                IP
-            </span>
+    <div class="info-item">
+        <span class="info-label">IP</span>
+        <span class="info-value">EpokSMP.exaroton.me</span>
+    </div>
 
-            <span class="info-value">
-                EpokSMP.exaroton.me
-            </span>
+    <div class="info-item">
+        <span class="info-label">Version</span>
+        <span class="info-value">26.3</span>
+    </div>
 
-        </div>
+    <div class="info-item">
+        <span class="info-label">RAM</span>
+        <span class="info-value">DDR5 4GB</span>
+    </div>
 
-        <div class="info-item">
+    <div class="info-item">
+        <span class="info-label">CPU</span>
+        <span class="info-value">AMD RYZEN™ 9950X 2 Cores</span>
+    </div>
 
-            <span class="info-label">
-                Version
-            </span>
+</section>
 
-            <span class="info-value">
-                26.3
-            </span>
+<section class="info-card">
 
-        </div>
 
-         <div class="info-item">
+<h2>Players</h2>
 
-            <span class="info-label">
-                RAM
-            </span>
+<div class="players-list">
 
-            <span class="info-value">
-                DDR5 4GB
-            </span>
+    <div class="info-item">
+        <span class="info-label">DivadDev_</span>
+        <span class="info-value">Owner</span>
+    </div>
 
-        </div>
+    <div class="info-item">
+        <span class="info-label">Tobbe_Lobbe</span>
+        <span class="info-value">Owner</span>
+    </div>
 
-            <div class="info-item">
+    <div class="info-item">
+        <span class="info-label">FreakyFilip67</span>
+        <span class="info-value">Server Helper</span>
+    </div>
 
-            <span class="info-label">
-                CPU
-            </span>
+    <div class="info-item">
+        <span class="info-label">ItzNix_</span>
+        <span class="info-value">Moderator</span>
+    </div>
 
-            <span class="info-value">
-                AMD RYZEN™ 9950X 2 Cores
-            </span>
+    <div class="info-item">
+        <span class="info-label">skelett_</span>
+        <span class="info-value">Moderator</span>
+    </div>
 
-        </div>
+    <div class="extra-player">
 
-    </section>
+    <div class="info-item">
+        <span class="info-label">Aura_Gabbe</span>
+        <span class="info-value">Member</span>
+    </div>
 
-    <section class="info-card">
-
-        <h2>Plugins</h2>
-
-        <a
-            class="plugin-link"
-            href="https://modrinth.com/plugin/simple-voice-chat?version=26.3&loader=fabric#download"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Simple Voice Chat
-            <span>↗</span>
-        </a>
-
-        <a
-            class="plugin-link"
-            href="https://modrinth.com/plugin/treetimber-v2"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            TreeTimber v2 (No Download Needed)
-            <span>↗</span>
-        </a>
-
-        <a
-            class="plugin-link"
-            href="https://modrinth.com/plugin/luckperms"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            LuckPerms (No Download Needed)
-            <span>↗</span>
-        </a>
-
-    </section>
-
-    <section class="info-card">
-
-        <h2>Roles</h2>
+    <div class="info-item">
+        <span class="info-label">ATalkingRat</span>
+        <span class="info-value">Member</span>
+    </div>
 
         <div class="info-item">
-
-            <span class="info-label">
-                DivadDev_
-            </span>
-
-            <span class="info-value">
-                Owner
-            </span>
-
+            <span class="info-label">Alkash271</span>
+            <span class="info-value">Member</span>
         </div>
 
         <div class="info-item">
-
-            <span class="info-label">
-                Tobbe_Lobbe
-            </span>
-
-            <span class="info-value">
-                Owner
-            </span>
-
+            <span class="info-label">i_am_doggy</span>
+            <span class="info-value">Member</span>
         </div>
 
         <div class="info-item">
-
-            <span class="info-label">
-                FreakyFilip67
-            </span>
-
-            <span class="info-value">
-                Server Helper
-            </span>
-
+            <span class="info-label">DiamondBoyPlayz</span>
+            <span class="info-value">Member</span>
         </div>
 
         <div class="info-item">
-
-            <span class="info-label">
-                ItzNix_
-            </span>
-
-            <span class="info-value">
-                Moderator
-            </span>
-
+            <span class="info-label">UpSkillz</span>
+            <span class="info-value">Member</span>
         </div>
 
         <div class="info-item">
-
-            <span class="info-label">
-                skelett_
-            </span>
-
-            <span class="info-value">
-                Moderator
-            </span>
-
+            <span class="info-label">Flosimpa</span>
+            <span class="info-value">Member</span>
         </div>
 
-    </section>
+        <div class="info-item">
+            <span class="info-label">FelixSpelar</span>
+            <span class="info-value">Member</span>
+        </div>
+
+        <div class="info-item">
+            <span class="info-label">Wallewalle123</span>
+            <span class="info-value">Member</span>
+        </div>
+
+        <div class="info-item">
+            <span class="info-label">Guess_Who_It_Is</span>
+            <span class="info-value">Member</span>
+        </div>
+
+        <div class="info-item">
+            <span class="info-label">nekluh2</span>
+            <span class="info-value">Member</span>
+        </div>
+
+        <div class="info-item">
+            <span class="info-label">Zedseer</span>
+            <span class="info-value">Member</span>
+        </div>
+
+    </div>
+
+</div>
+
+<button
+    class="show-players-button"
+    id="showPlayersButton"
+    onclick="togglePlayers()"
+>
+    Show More
+</button>
+
+
+</section>
+
+
+<section class="info-card">
+
+    <h2>Plugins</h2>
+
+    <a
+        class="plugin-link"
+        href="https://modrinth.com/plugin/simple-voice-chat?version=26.3&loader=fabric#download"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Simple Voice Chat
+        <span>Modrinth ↗</span>
+    </a>
+
+    <a
+        class="plugin-link"
+        href="https://modrinth.com/plugin/treetimber-v2"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        TreeTimber v2 (No Download Needed)
+        <span>Modrinth ↗</span>
+    </a>
+
+    <a
+        class="plugin-link"
+        href="https://modrinth.com/plugin/luckperms"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        LuckPerms (No Download Needed)
+        <span>Modrinth ↗</span>
+    </a>
+
+    <a
+        class="plugin-link"
+        href="https://modrinth.com/plugin/chunky"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Chunky (No Download Needed)
+        <span>Modrinth ↗</span>
+    </a>
+
+</section>
 
 </main>
 
+</div>
+
+<div id="newsPage" class="sub-page">
+
+<header class="page-header">
+
+
+<button class="back-button" onclick="showMenu()">
+    ← Back
+</button>
+
+<h1 class="page-title">
+    News
+</h1>
+
+
+</header>
+
+<main class="news-content">
+
+
+<article class="news-card">
+
+    <div class="news-date">
+         
+    </div>
+
+    <h2>
+        Empty
+    </h2>
+
+    <p>
+        There is currently no news.
+    </p>
+
+
+</article>
+
+</main>
 
 </div>
 
@@ -328,11 +406,34 @@
         menuPage.classList.add("menu-enter");
     }
 
+    function togglePlayers() {
+
+
+       const extraPlayers = document.querySelector(".extra-player");
+       const button = document.getElementById("showPlayersButton");
+
+       if (extraPlayers.classList.contains("show")) {
+
+       extraPlayers.classList.remove("show");
+       button.textContent = "Show More";
+
+       } else {
+
+      extraPlayers.classList.add("show");
+      button.textContent = "Show Less";
+
+}
+
+
+}
+
+
     function showMenu() {
 
         document.getElementById("menuPage").style.display = "block";
         document.getElementById("rulesPage").style.display = "none";
         document.getElementById("infoPage").style.display = "none";
+        document.getElementById("newsPage").style.display = "none";
 
         animateMenu();
     }
@@ -342,6 +443,7 @@
         document.getElementById("menuPage").style.display = "none";
         document.getElementById("rulesPage").style.display = "block";
         document.getElementById("infoPage").style.display = "none";
+        document.getElementById("newsPage").style.display = "none";
 
         document.getElementById("rulesPage").classList.remove("page-enter");
 
@@ -357,12 +459,29 @@
         document.getElementById("menuPage").style.display = "none";
         document.getElementById("rulesPage").style.display = "none";
         document.getElementById("infoPage").style.display = "block";
+        document.getElementById("newsPage").style.display = "none";
 
         document.getElementById("infoPage").classList.remove("page-enter");
 
         void document.getElementById("infoPage").offsetWidth;
 
         document.getElementById("infoPage").classList.add("page-enter");
+    }
+
+    function showNews() {
+
+        document.getElementById("menuPage").style.display = "none";
+        document.getElementById("rulesPage").style.display = "none";
+        document.getElementById("infoPage").style.display = "none";
+        document.getElementById("newsPage").style.display = "block";
+
+        document.getElementById("newsPage").classList.remove("page-enter");
+
+        void document.getElementById("newsPage").offsetWidth;
+
+        document.getElementById("newsPage").classList.add("page-enter");
+
+        window.scrollTo(0, 0);
     }
 
     function showSection(sectionNumber) {
